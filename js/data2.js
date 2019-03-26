@@ -1381,7 +1381,6 @@ var subjects = [{
 	}
 ];
 
-
 var parties = [{
 		"name": "VVD",
 		"secular": true,

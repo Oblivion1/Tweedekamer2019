@@ -1,50 +1,37 @@
 <!DOCTYPE html>
-<html lang="NL" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/master.css">
-    <title>StemWijzer Tweede Kamer 2017</title>
-    <script src="js/data.js"></script>
-  </head>
-  <body>
-    <main id="intro" class="active">
-      <section id="introcon">
-        <div class="init">
-          <img src="css/images/logo-stemWijzer.svg" alt="" width="331px">
-          <h2>Test uw politieke voorkeur aan de hand van 30 stellingen</h2>
-          <a class="intro" href="#"></a>
-          <a class="intro" href="privacy.html">Bekijk de toegankelijke versie voor mensen met een visuele beperking</a>
-          <button type="button" id="introbutton" name="button">start</button>
-        </div>
+<html>
+	<head>
+		<title>Stemwijzer2019</title>
+		<meta charset="UTF-8">
 
-        <div class="intro__adv">
-          <div class="adv__container">
-            <h2 class="adv__title">
-              <a href="https://www.stemmentracker.nl/" target="_blank">
-                <img src="css/images/logo-stemmentracker.svg">
-              </a>
-            </h2>
-            <p class="adv__description">Wat hebben de partijen in het verleden waargemaakt van hun verkiezingsbeloften? 'Track' uw stem met de Stemmentracker, een website die terugblikt op 30 Tweede Kamerstemmingen van de afgelopen regeerperiode. Met welke partij stemde u mee?</p>
-          </div>
-        </div>
-      </section >
-      <section id="sidebar">
-        <div class="">
-          <img id="intrologo" src="css/images/logo-1v.svg" alt="">
-        </div>
-        <div class="partijencon">
-        </div>
-        <h3>Deze partijen doen mee</h3>
-      </section>
-    </main>
-    <div id='statements'>
-      <h2 id='title'></h2>
-      <p id='statement'></p>
-      <button type="button" id="eens" onclick="answer('eens')">eens</button>
-      <button type="button" id="geen" onclick="answer('geen')">geen van beide</button>
-      <button type="button" id="oneens" onclick="answer('oneens')">oneens</button>
-      <span><a onclick="answer('skip')">sla over</a></span>
-    </div>
-  </body>
-  <script src="js/app.js"></script>
+		<link rel="stylesheet" type="text/css" href="style/master.css" />
+		<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css" />
+	</head>
+	<body onload="javascript:onloadHead()">
+		<section id="section">
+			<button id="reset" class="btn-radial"></button>
+			<h1 id="titel">Stem wijzer</h1>
+			<section id="statement"><p>Test uw politieke voorkeur aan de hand van een aantal stellingen</p></section>
+			<section id="startsection">
+				<button id="start" class="btn" onclick="nextQuestion()">Start</button>
+			</section>
+			<section id="others">
+				<button class="btn" id="option1">Eens</button>
+				<button class="btn" id="option2">Geen van beide</button>
+				<button class="btn" id="option3">Niet eens</button>
+				<button class="btn" id="optionskip">Sla deze Vraag over</button>
+				<p><input type="checkbox" id="questionMultiplierBox"> Ik Vind dit belangrijk</p>
+			</section>
+			<section id="partiesopinion">
+				<section id="pro">
+				</section>
+				<section id="ambivalent">
+				</section>
+				<section id="contra">
+				</section>
+			</section>
+		</section>
+		<script src="js/data2.js" type="text/javascript"></script>
+		<script src="js/index.js" type="text/javascript"></script>
+	</body>
 </html>
